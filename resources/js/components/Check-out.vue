@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
           <div class="box">
-            <h3 class="box-title">Select Your Hosting Plan</h3>
+            <h3 class="box-title">Product in your cart</h3>
             <div class="plan-selection">
               <div class="plan-data">
                 <input
@@ -16,7 +16,7 @@
                 />
                 <label for="question1">Personal</label>
                 <p class="plan-text">
-                  1 install | 25K visits/month | 10 GB local storage
+                  Up to 5 installs | 50K visits/month | 5 GB local storage
                 </p>
                 <span class="plan-price">$29 / mo</span>
               </div>
@@ -89,6 +89,8 @@
                   <p class="summary-text">$258 / mo</p>
                   <span class="summary-small-text pull-right">1 month</span>
                 </div>
+                <br/><br/>
+                <button class="btn btn-warning" style="margin:0px">Place Order</button>
               </div>
             </div>
           </div>
@@ -101,16 +103,19 @@
 <script>
 export default {
   data() {
-      return{}
+      return{
+        items: [],
+      }
   },
-  method: {
+  methods: {
     async getCartItems() {
       let response = await axios.get('/checkout/get/items');
+      this.items = response.data;
       console.log(response);
     }
   },
   created() {
     this.getCartItems();
-  },
-};
+  }
+}
 </script>

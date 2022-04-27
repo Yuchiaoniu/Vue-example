@@ -48,10 +48,12 @@ class CartsController extends Controller
 
         }
         // Getting product details.
+        //先定義變數product為傳入的product_id的特定單筆資料的所有欄位
 
         $product = Product::where('id', $request->get('product_id'))->first();
 
-        $productFoundInCart = Cart::where('product_id', $request->get('product_id'))->pluck('id');
+        $productFoundInCart = Cart::where('product_id', 
+        $request->get('product_id'))->pluck('id');
         
 
         if($productFoundInCart->isEmpty())
@@ -63,7 +65,7 @@ class CartsController extends Controller
                 'price' => $product->sale_price,
                 'user_id' => auth()->user()->id,
             ]);
-        }
+        } 
         else
         {
             // Incrementing Product quantity in cart.
@@ -133,20 +135,31 @@ class CartsController extends Controller
     {
 
         $cartItems = Cart::with('product')->where('user_id', auth()->user()->id)->get('quantity');
+        $finalData = [];
 
         if(isset($cartItems))
         {
             foreach($cartItems as $cartItem)
             {
-                var_dump($cartItem->product_id);
-                var_dump($cartItem->product_id);
-                var_dump($cartItem->product_id);
-                var_dump($cartItem->product_id);
-                var_dump($cartItem->product_id);
+                if($cartItem->product)
+                {
+                    foreach($cartItem->product as $cartProduct)
+                    {
+                        if($cartProduct->id == $cartItem->product_id)
+                        {
+                        $finalData[$cartItem->product_id]['id'] = $cartProduct->id;
+                        $finalData[$cartItem->product_id]['name'] = $cartProduct->name;
+                        $finalData[$cartItem->product_id]['quantity'] = $cartItem->quantity;
+                        $finalData[$cartItem->product_id]['sale_price'] = $cartItem->price;
+                        $finalData[$cartItem->product_id]['total'] = $cartItem->price * $cartItem->quantity;
+                        $finalData['totalAmount'] = $amount;
+
+                        }
+                    }
+                }
             }
         }
-
-        dd($cartItems);
-        return 123;
+        
+        return response()->json($finalData);
     }
 }

@@ -324,5 +324,5 @@
 @endsection
 
 @section('content')
-    <checkout />
+    <check-out />
 @endsection

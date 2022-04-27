@@ -23,7 +23,7 @@
                }
 
                //if user logged in  then add item into cart
-                let response = await axios.post('/cart',{
+            let response = await axios.post('/cart',{
                     'product_id': this.productId
                 });
 
@@ -35,4 +35,9 @@
             console.log('Component mounted.');
         }
     }
+
+    //使用v-on觸發了methods，然後methods定義了response與cartcontroller互動，並使用emit傳出該筆被選取的特定資料
+    //，再由cartcontroller做接下去的動作
 </script>
+
+

@@ -19,16 +19,15 @@
                 this.itemCount = item;
             })
         },
-        method:{
+        methods:{
             
             async getCartItemsOnPageLoad(){
                 let response = await axios.post('/cart');
                 this.itemCount = response.data.items;
-                alert(this.itemCount);
             }
         }, 
         created(){
             this.getCartItemsOnPageLoad();
-        }
+        },
     }
 </script>

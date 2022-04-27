@@ -14,12 +14,10 @@ use App\Http\Controllers\CartsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', [ProductsController::class, 'index']);
 
-Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/cart', [CartsController::class, 'store'])->name('cart');
 
 Route::get('/checkout', [CartsController::class, 'index'])->name('checkout');

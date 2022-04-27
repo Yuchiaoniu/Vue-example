@@ -21,14 +21,14 @@ Vue.use(VueToastr);
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+const files = require.context('./', true, /\.vue$/i)
+files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 Vue.component('add-to-cart-button', require('./components/AddToCart.vue').default);
 Vue.component('cart-a', require('./components/Cart.vue').default);
-Vue.component('checkout', require('./components/Checkout.vue').default);
+Vue.component('check-out', require('./components/Check-out.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
