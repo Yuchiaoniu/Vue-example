@@ -18,16 +18,16 @@ And check if Vue.js installed successfully. type"vue --version"<br>
 
 4.create project file There would be four important files. a~d.
 
-a. under yourproject/src/main.js
-b. under yourproject/src/App.vue
-c. under yourproject/src/components/HelloWorld.vue
-d. under yourproject/public/index.html
+a. under yourproject/src/main.js<br>
+b. under yourproject/src/App.vue<br>
+c. under yourproject/src/components/HelloWorld.vue<br>
+d. under yourproject/public/index.html<br>
 
-When project being start the webpack will go to these four files in order.
-a. main.js this file will be the entry point of a Vue application”. //應用程式入口點
-b. this file is the vue instance which will be render in a.
-c. this will be render in b. Other kind of file will be same way to render. So on and so forth.
-d. all the b and c will be injure in this file and show on our screen.
+When project being start the webpack will go to these four files in order.<br>
+a. main.js this file will be the entry point of a Vue application”. //應用程式入口點<br>
+b. this file is the vue instance which will be render in a.<br>
+c. this will be render in b. Other kind of file will be same way to render. So on and so forth.<br>
+d. all the b and c will be injure in this file and show on our screen.<br>
 
 5.edit file in file b, there will be three different content. taghtml contnet, tag<script>js content</script>, and tag<style>css content</style>.
 
