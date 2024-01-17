@@ -10,7 +10,9 @@ type node -v to check node.js version Under the Windows operating system
 
 2.install vue.js
 
-After instaled node.js, we can create a folder and use cmd to cd the folader. Under the folder type "npm install -g @vue/cli" to install vue project. And check if Vue.js installed successfully. type"vue --version"
+After instaled node.js, we can create a folder and use cmd to cd the folader. <br>
+Under the folder type "npm install -g @vue/cli" to install vue project. <br>
+And check if Vue.js installed successfully. type"vue --version"<br>
 
 3.create project go to the folder we just created, and then type"vue create " change the to the name we need.
 
