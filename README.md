@@ -1,5 +1,5 @@
-# Vue example & deployment<br>
-<br>Environment deployment<br>
+# Vue example & deployment
+Environment deployment<br><br>
 1.install node.js Windows：Download the install package from node.js official site。
 
 macOS：brew install node1。
