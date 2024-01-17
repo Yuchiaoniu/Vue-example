@@ -16,7 +16,7 @@ And check if Vue.js installed successfully. type"vue --version"<br>
 
 3.create project <br>
 under the folder, type "npm init vue@latest", this will lead a series of question like the project name and what tools to use.. and so on. <br>
-or just simply type"vue create yourProjectName" <br>
+or just simply type"npx vue create yourProjectName" <br>
 
 4.create project file <br>
 There would be four important files to get it know after create project. a~d.<br><br>
