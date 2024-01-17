@@ -1,4 +1,4 @@
-# Vue example & deployment
+# Vue example & deployment<br>
 <br>Environment deployment<br>
 1.install node.js Windows：Download the install package from node.js official site。
 
