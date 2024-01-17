@@ -15,15 +15,15 @@ Under the folder type "npm install -g @vue/cli" to install vue project. <br>
 And check if Vue.js installed successfully. type"vue --version"<br>
 
 3.create project <br>
-go to the folder we just created, and then type"vue create " change the to the name we need.<br>
+under the folder, type "npm init vue@latest", this will lead a series of question like the project name and what tools to use.. and so on. <br>
 
 4.create project file <br>
-There would be four important files. a~d.<br><br>
+There would be four important files to get it know after create project. a~d.<br><br>
 
-a. under yourproject/src/main.js<br>
-b. under yourproject/src/App.vue<br>
-c. under yourproject/src/components/HelloWorld.vue<br>
-d. under yourproject/public/index.html<br>
+a. under myproject/src/main.js<br>
+b. under myproject/src/App.vue<br>
+c. under myproject/src/components/HelloWorld.vue<br>
+d. under myproject/public/index.html<br>
 
 When project being start the webpack will go to these four files in order.<br>
 a. main.js this file will be the entry point of a Vue application”. //應用程式入口點<br>
