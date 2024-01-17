@@ -14,9 +14,11 @@ After instaled node.js, we can create a folder and use cmd to cd the folader. <b
 Under the folder type "npm install -g @vue/cli" to install vue project. <br>
 And check if Vue.js installed successfully. type"vue --version"<br>
 
-3.create project go to the folder we just created, and then type"vue create " change the to the name we need.
+3.create project <br>
+go to the folder we just created, and then type"vue create " change the to the name we need.<br>
 
-4.create project file There would be four important files. a~d.
+4.create project file <br>
+There would be four important files. a~d.<br><br>
 
 a. under yourproject/src/main.js<br>
 b. under yourproject/src/App.vue<br>
